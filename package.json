@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "start": "npm run build && node public/server/index.js",
     "start:dev": "npm run build:dev && node public/server/index.js",
     "build": "npm run build:fe && npm run build:be",
