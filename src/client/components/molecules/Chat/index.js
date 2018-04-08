@@ -10,7 +10,7 @@ const Chat = (props) => {
     <div className="chat-container">
       <div className="chat-area">
         {props.chat.map(chat => (
-          <ChatBox key={chat.text.substr(7)} text={chat.text} sender={chat.sender} />
+          <ChatBox key={chat.text} text={chat.text} sender={chat.sender} />
         ))}
       </div>
       <ChatInput />

@@ -50,3 +50,16 @@
     background-color: orange
   } */
 }
+.MostlyCloudy,
+.Drizzle {
+  filter:brightness(70%) !important;
+}
+
+.Clear {
+  filter:brightness(130%) !important;
+}
+
+.PartlyCloudy,
+.Overcast {
+  filter:brightness(100%) !important;
+}

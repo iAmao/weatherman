@@ -1,11 +1,12 @@
 import React from 'react'
+import { connect } from '../../../context'
 
-const Status = () => {
+const Status = (props) => {
   return (
     <div className="status-container">
-      <img src="/free-outdoor-cafes-vector 3.jpg" alt="Weather"/>
+      <img className={props.weather} src="/free-outdoor-cafes-vector 3.jpg" alt="Weather"/>
     </div>
   )
 }
 
-export default Status
+export default connect(Status)

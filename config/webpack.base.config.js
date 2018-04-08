@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -44,6 +45,7 @@ const config = {
       template: './config/index.html',
       filename: '../client/index.html',
     }),
+    new Dotenv()
   ],
 };
 
