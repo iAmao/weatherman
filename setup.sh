@@ -1,0 +1,1 @@
+echo "ACCESS_TOKEN=${ACCESS_TOKEN}" > config/.env
