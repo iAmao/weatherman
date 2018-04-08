@@ -1,4 +1,5 @@
 import fs from 'fs'
+import cors from 'cors'
 import path from 'path'
 import logger from 'morgan'
 import express from 'express'
@@ -8,6 +9,8 @@ const app = express()
 const { PORT = 3000 } = process.env
 
 const image = fs.readFileSync(path.resolve(__dirname, '../client/index.html'), 'utf-8')
+
+app.use(cors())
 
 app.use(logger('dev'))
 
