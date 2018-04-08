@@ -11,6 +11,7 @@ export default (req, res) => {
 
   getLocations(city)
     .then((cities) => {
+      console.log(cities)
       if (Object.keys(cities).length > 1) {
         const response = `I found ${Object.keys(cities).length} cities with a similar name.
           "${Object.keys(cities).join('" and "')}". You'll have to specify which one.
