@@ -5,6 +5,8 @@ const { GOOGLE_API_KEY, WEATHER_API_KEY } = process.env
 export default (req, res) => {
   res.setHeader('Content-Type', 'application/json')
 
+  console.log(req.body)
+
   const city = req.body.result.parameters['geo-city']
 
   getLocations(city)
