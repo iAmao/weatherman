@@ -5,6 +5,8 @@ import express from 'express'
 
 const app = express()
 
+const { PORT = 3000 } = process.env
+
 const image = fs.readFileSync(path.resolve(__dirname, '../client/index.html'), 'utf-8')
 
 app.use(logger('dev'))
@@ -23,4 +25,4 @@ app.get('*', (req, res) => {
   return res.sendFile(path.resolve(__dirname, '../client/index.html'))
 })
 
-app.listen(3000, () => console.log('server started on port', 3000))
+app.listen(PORT, () => console.log('server started on port', PORT))
