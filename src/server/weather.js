@@ -5,7 +5,9 @@ const { GOOGLE_API_KEY, WEATHER_API_KEY } = process.env
 export default (req, res) => {
   res.setHeader('Content-Type', 'application/json')
 
-  getLocations(req.query.city)
+  const city = req.body.result.parameters['geo-city']
+
+  getLocations(city)
     .then((cities) => {
       if (Object.keys(cities).length > 1) {
         const response = `I found ${Object.keys(cities).length} cities with a similar name.
