@@ -3,10 +3,6 @@ import https from 'https'
 const { GOOGLE_API_KEY, WEATHER_API_KEY } = process.env
 
 export default (req, res) => {
-  res.setHeader('Content-Type', 'application/json')
-
-  console.log(req.body)
-
   const city = req.body.result.parameters['geo-city']
 
   getLocations(city)
@@ -16,6 +12,7 @@ export default (req, res) => {
         const response = `I found ${Object.keys(cities).length} cities with a similar name.
           "${Object.keys(cities).join('" and "')}". You'll have to specify which one.
           I'm not that smart... yet :)`
+        res.setHeader('Content-Type', 'application/json')
         return res.json({
           speech: response,
           displayText: response
@@ -24,6 +21,7 @@ export default (req, res) => {
         return getWeatherByLocation(Object.values(cities)[0])
           .then((result) => {
             const response = `Well, its ${result.weather.currently.summary} with a temperature of about ${result.weather.currently.temperature}°F`
+            res.setHeader('Content-Type', 'application/json')
             return res.json({
               speech: response,
               displayText: response
