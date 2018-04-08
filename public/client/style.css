@@ -1,0 +1,52 @@
+@media(max-width: 576px) {
+  .main-container {
+    width: 100vw !important;
+  }
+  .status-chat-container {
+    display: block !important;
+    border: none !important;
+  }
+
+  .status-chat-container .status-container {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  .status-chat-container .status-container img {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  .status-chat-container .chat-container {
+    width: 100% !important;
+  }
+
+  .status-chat-container .chat-container .chat-area {
+    overflow-y: scroll !important;
+  }
+  .status-chat-container .chat-container .chat-area .chat-box {
+    font-size: 12px !important;
+    max-width: 150px !important;
+    border-radius: 60px !important;
+  }
+
+  .status-chat-container .chat-container .text-area {
+    height: 40px !important;
+  }
+  /* .status-chat-container .chat-container .text-area input {
+    padding: 0;
+    width: 79vw;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 1vw;
+  } */
+  /* .status-chat-container .chat-container .text-area button {
+    height:100%;
+    width: 20vw;
+    float: right;
+    border: none;
+    color: #FFF;
+    background-color: orange
+  } */
+}

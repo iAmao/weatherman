@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="title" content="Weatherman" />
+  <meta name="keywords" content="Inumidun, Amao, Inumidun Amao, weather, weatherman, man" />
+  <meta name="description" content="Talk with the weather man!" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#536878">
+  <title>Weatherman</title>
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0 auto;
+      background: orange;
+      background: radial-gradient(#FBDA61, #F76B1C)
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-container {
+  width: 90vw;
+  margin: auto;
+  /* background-color: #FFF; */
+  }
+
+  .logo-container {
+    width: 100%;
+    text-align: center
+  }
+
+  .logo-container div {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: #FFF;
+  }
+
+  .logo-container div h3 {
+    margin: 0;
+  }
+
+  .status-chat-container {
+    width: 100%;
+    display: flex;
+    border: 4px solid #FFF;
+  }
+
+  .status-chat-container .status-container {
+    width: 60%;
+    height: 60vh;
+  }
+
+  .status-chat-container .status-container img {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .status-chat-container .chat-container {
+    width: 40%;
+    height: 60vh;
+    background-color: #222;
+  }
+
+  .status-chat-container .chat-container .chat-area {
+    padding: 5px;
+    height: 53.8vh;
+    max-height: 54vh;
+    overflow-y: scroll;
+  }
+  .status-chat-container .chat-container .chat-area .chat-box-container {
+    width: 100%;
+    display: block;
+  }
+
+  .status-chat-container .chat-container .chat-area .chat-box-container .clear {
+    clear: both;
+  }
+
+  .status-chat-container .chat-container .chat-area .chat-box {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: fit-content;
+    justify-content: center;
+    margin: 1px;
+    font-size: 12px;
+    max-width: 75%;
+    padding: 5px 15px;
+    width: fit-content;
+    border-radius: 60px;
+    overflow-x: visible;
+    overflow-wrap: break-word;
+    font-family: "Comfortaa", cursive;
+  }
+  .status-chat-container .chat-container .chat-area .bot-chat {
+    float: left;
+    color: #222;
+    background-color: #FFF;
+  }
+  .status-chat-container .chat-container .chat-area .user-chat {
+    float: right;
+    color: #FFF;
+    background-color: orange;
+  }
+
+  .status-chat-container .chat-container .text-area {
+    padding: 0;
+    height: 5vh;
+    background-color: #FFF;
+  }
+  .status-chat-container .chat-container .text-area input {
+    padding: 0;
+    width: 79%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 1%;
+  }
+  .status-chat-container .chat-container .text-area button {
+    height:100%;
+    width: 20%;
+    float: right;
+    border: none;
+    color: #FFF;
+    background-color: orange
+  }
+  #init {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  </style>
+  <link rel="stylesheet" href="/style.css" type="text/css"/>
+</head>
+<body>
+  <div id="app">
+    <div id="init">
+      <h3>Weatherman</h3>
+    </div>
+  </div>
+  <noscript>Please enable javascript</noscript>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        }).catch(function(err) {
+          console.log(err)
+        });
+      });
+    } else {
+      console.log('service worker is not supported');
+    }
+  </script>
+</body>
+</html>

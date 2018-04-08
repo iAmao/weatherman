@@ -1,0 +1,4 @@
+node_modules/
+config/certs
+public/server
+public/client/bundle.js
